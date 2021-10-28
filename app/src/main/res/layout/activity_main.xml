@@ -1,0 +1,875 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:scrollbars="none"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="wrap_content"
+        android:layout_height="600dp"
+        android:layout_above="@+id/navbar"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="124dp">
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:background="#000000"
+                android:text="Playlists that you'll like ♡ (˘▽˘&gt;ԅ( ˘⌣˘)"
+                android:textColor="@color/title_text_colour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView2" />
+
+            <ImageButton
+                android:id="@+id/searchButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#000000"
+                android:onClick="prepareSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/homepage"
+                app:srcCompat="@drawable/search" />
+
+            <TextView
+                android:id="@+id/homepage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="102dp"
+                android:layout_marginLeft="102dp"
+                android:layout_marginTop="32dp"
+                android:layout_marginEnd="111dp"
+                android:layout_marginRight="111dp"
+                android:text="@string/Homepage"
+                android:textColor="@color/title_text_colour"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/searchButton"
+                app:layout_constraintStart_toEndOf="@+id/hellonote"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="16dp"
+                android:text="I think you'll like this  (* ^ ω ^)"
+                android:textColor="@color/text_colour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/hellonote" />
+
+            <ImageView
+                android:id="@+id/hellonote"
+                android:layout_width="38dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/edgynote" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView2"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginTop="8dp"
+                android:duplicateParentState="false"
+                android:fadeScrollbars="false"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView8">
+
+                <LinearLayout
+                    android:id="@+id/overall11"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/card11"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle11"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageListen1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="listenAgainSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textListen1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="jddjdjdjdjdjdjajcnkahefkhfksjfcsjksfkskdjsjdjs"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card41"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle41"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageListen2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="listenAgainSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textListen2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card21"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle21"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageListen3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="listenAgainSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textListen3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card31"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle31"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageListen4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="listenAgainSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textListen4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card51"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle51"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageListen5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="listenAgainSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textListen5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+                <LinearLayout
+                    android:id="@+id/overall1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/card1"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle1"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageLike1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="likeThisSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textLike1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="jddjdjdjdjdjdjajcnkahefkhfksjfcsjksfkskdjsjdjs"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card4"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle4"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageLike2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="likeThisSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textLike2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsksfhsfhkshfkjhkjwad"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card2"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle2"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageLike3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="likeThisSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textLike3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card3"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle3"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageLike4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="likeThisSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textLike4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card5"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle5"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageLike5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="likeThisSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textLike5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+
+                android:text="Listen to them again &lt;(￣︶￣)&gt;"
+                android:textColor="@color/title_text_colour"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalScrollView" />
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="8dp"
+                android:background="#000000"
+                android:text="Trending  (つ✧ω✧)つ"
+                android:textColor="@color/title_text_colour"
+                android:visibility="visible"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/horizontalscrollview3" />
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalscrollview3"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView6">
+
+                <LinearLayout
+                    android:id="@+id/createdPlaylists"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagePlaylist1"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/edgynote" />
+
+                        <TextView
+                            android:id="@+id/textPlaylist1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="WAR to end all wars fhfhfhfhffnksfkskjfkjhfk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagePlaylist2"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/edgynote" />
+
+                        <TextView
+                            android:id="@+id/textPlaylist2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="WAR to end all wars fhfhfhfhffnksfkskjfkjhfk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagePlaylist3"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/edgynote" />
+
+                        <TextView
+                            android:id="@+id/textPlaylist3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="WAR to end all wars fhfhfhfhffnksfkskjfkjhfk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagePlaylist4"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/edgynote" />
+
+                        <TextView
+                            android:id="@+id/textPlaylist4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="WAR to end all wars fhfhfhfhffnksfkskjfkjhfk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:id="@+id/imagePlaylist5"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            android:scaleType="centerCrop"
+                            app:srcCompat="@drawable/edgynote" />
+
+                        <TextView
+                            android:id="@+id/textPlaylist5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="WAR to end all wars fhfhfhfhffnksfkskjfkjhfk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <HorizontalScrollView
+                android:id="@+id/horizontalScrollView4"
+                android:layout_width="match_parent"
+                android:layout_height="135dp"
+                android:layout_marginTop="8dp"
+                android:scrollbars="none"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView12">
+
+                <LinearLayout
+                    android:id="@+id/overall114"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:id="@+id/card114"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="8dp"
+                        android:layout_marginLeft="8dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle114"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageTrending1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textTrending1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="jddjdjdjdjdjdjajcnkahefkhfksjfcsjksfkskdjsjdjs"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card414"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle414"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageTrending2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="trendingSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textTrending2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card214"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle214"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageTrending3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="trendingSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textTrending3"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card314"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle314"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageTrending4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="trendingSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textTrending4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/card514"
+                        android:layout_width="96dp"
+                        android:layout_height="129dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginLeft="24dp"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:id="@+id/imagecircle514"
+                            android:layout_width="96dp"
+                            android:layout_height="89dp"
+                            app:cardCornerRadius="48dp">
+
+                            <ImageView
+                                android:id="@+id/imageTrending5"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:onClick="trendingSend"
+                                android:scaleType="centerCrop"
+                                app:srcCompat="@drawable/edgynote" />
+                        </androidx.cardview.widget.CardView>
+
+                        <TextView
+                            android:id="@+id/textTrending5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:gravity="center"
+                            android:text="hjdhdkdsk"
+                            android:textColor="@color/text_colour" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+            </HorizontalScrollView>
+
+            <EditText
+                android:id="@+id/searchText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:ems="10"
+                android:hint="What are you searching for?"
+                android:imeOptions="actionSearch"
+                android:inputType="textPersonName"
+                android:textColor="@color/title_text_colour"
+                android:textColorHint="@color/title_text_colour"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/homepage"
+                app:layout_constraintEnd_toStartOf="@+id/searchButton"
+                app:layout_constraintStart_toEndOf="@+id/hellonote"
+                app:layout_constraintTop_toTopOf="@+id/homepage" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/house" />
+
+        <ImageView
+            android:id="@+id/recommend"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="goPlaylist"
+            app:srcCompat="@drawable/playlist" />
+    </LinearLayout>
+
+
+</LinearLayout>

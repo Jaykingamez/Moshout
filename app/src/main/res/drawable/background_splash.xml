@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:opacity="opaque">
+    <item android:drawable="@color/black"/>
+    <item android:top="125dp">
+        <bitmap
+            android:gravity="top"
+
+
+            android:src="@drawable/edgynote"/>
+    </item>
+    <item android:top="450dp">
+        <bitmap
+            android:gravity="top"
+            android:src="@drawable/moshoutlogo"/>
+    </item>
+    <item android:top="625dp">
+        <bitmap
+            android:gravity="top"
+            android:src="@drawable/pagination"/>
+    </item>
+</layer-list>

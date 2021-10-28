@@ -1,0 +1,2 @@
+rootProject.name='Moshout'
+include ':app'

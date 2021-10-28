@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    android:fillViewport="true"
+    android:orientation="vertical"
+    android:focusableInTouchMode="true"
+    tools:context=".SearchActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="600dp"
+        android:layout_above="@+id/navbar"
+        app:layout_constraintBottom_toTopOf="@+id/navbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/searchNote"
+                android:layout_width="38dp"
+                android:layout_height="64dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/edgynote" />
+
+            <TextView
+                android:id="@+id/textSearch3"
+                android:layout_width="284dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/text_colour"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageSearch3"
+                app:layout_constraintStart_toStartOf="@+id/imageSearch3"
+                app:layout_constraintTop_toBottomOf="@+id/imageSearch3" />
+
+            <TextView
+                android:id="@+id/textSearch4"
+                android:layout_width="284dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/text_colour"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageSearch4"
+                app:layout_constraintStart_toStartOf="@+id/imageSearch4"
+                app:layout_constraintTop_toBottomOf="@+id/imageSearch4" />
+
+            <TextView
+                android:id="@+id/textSearch5"
+                android:layout_width="282dp"
+                android:layout_height="22dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/text_colour"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageSearch5"
+                app:layout_constraintStart_toStartOf="@+id/imageSearch5"
+                app:layout_constraintTop_toBottomOf="@+id/imageSearch5" />
+
+            <ImageView
+                android:id="@+id/imageSearch2"
+                android:layout_width="321dp"
+                android:layout_height="197dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSearch1"
+                app:srcCompat="@drawable/edgynote" />
+
+            <TextView
+                android:id="@+id/textSearch2"
+                android:layout_width="284dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/text_colour"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageSearch2"
+                app:layout_constraintStart_toStartOf="@+id/imageSearch2"
+                app:layout_constraintTop_toBottomOf="@+id/imageSearch2" />
+
+            <ImageView
+                android:id="@+id/imageSearch3"
+                android:layout_width="321dp"
+                android:layout_height="197dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSearch2"
+                app:srcCompat="@drawable/edgynote" />
+
+            <ImageView
+                android:id="@+id/imageSearch4"
+                android:layout_width="321dp"
+                android:layout_height="197dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSearch3"
+                app:srcCompat="@drawable/edgynote" />
+
+            <ImageView
+                android:id="@+id/imageSearch5"
+                android:layout_width="321dp"
+                android:layout_height="197dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textSearch4"
+                app:srcCompat="@drawable/edgynote" />
+
+            <ImageButton
+                android:id="@+id/buttonSearch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="#000000"
+                android:imeOptions="actionSearch"
+                android:onClick="prepareSearch"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/queryText"
+                app:srcCompat="@drawable/search" />
+
+            <TextView
+                android:id="@+id/textSearch1"
+                android:layout_width="284dp"
+                android:layout_height="23dp"
+                android:layout_marginTop="16dp"
+                android:gravity="center"
+                android:text="TextView"
+                android:textColor="@color/text_colour"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="@+id/imageSearch1"
+                app:layout_constraintStart_toStartOf="@+id/imageSearch1"
+                app:layout_constraintTop_toBottomOf="@+id/imageSearch1" />
+
+            <EditText
+                android:id="@+id/queryText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:background="@null"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:text="searchText"
+                android:textColor="@color/title_text_colour"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toStartOf="@+id/buttonSearch"
+                app:layout_constraintStart_toEndOf="@+id/searchNote"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageSearch1"
+                android:layout_width="321dp"
+                android:layout_height="197dp"
+                android:layout_marginTop="16dp"
+                android:background="#000000"
+                android:onClick="handleSelection"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/searchNote"
+                app:srcCompat="@drawable/edgynote" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/navbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/profile"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/profile" />
+
+        <ImageView
+            android:id="@+id/house"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="goHome"
+            app:srcCompat="@drawable/nohouse" />
+
+        <ImageView
+            android:id="@+id/recommend"
+            android:layout_width="40dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:visibility="invisible"
+            app:srcCompat="@drawable/heart" />
+
+        <ImageView
+            android:id="@+id/playlist"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="goPlaylist"
+            app:srcCompat="@drawable/playlist" />
+    </LinearLayout>
+
+</LinearLayout>
